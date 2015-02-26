@@ -3,6 +3,7 @@
 install-postgresql:
   pkg.installed:
     - name: {{ postgres.pkg }}
+    - reset_system_locale: false
 
 {% if postgres.create_cluster != False %}
 create-postgresql-cluster:
